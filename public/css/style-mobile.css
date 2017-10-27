@@ -1,0 +1,61 @@
+#content {
+	width:90%;
+}
+#tabla {
+	width:100%;
+}
+#tabla tr{
+	display: block;
+	padding:10px 5px;
+}
+#tabla thead{
+	display: none;
+}
+#tabla tr th{
+	border:block;
+	display: none;
+}
+#tabla tr td{
+	border:none;
+	background:none;
+	display: block;
+	font-size: 16px;
+	padding:0;
+	text-align:left;
+}
+#tabla tr td:first-child{
+font-weight:bold;
+}
+#tabla tr td:last-child{
+color:#DB282B;
+}
+h2{
+margin:0;
+padding:0;
+}
+#alias{
+float:none;
+margin:10px 0 0 0;
+}
+.consulta{
+text-decoration:none;
+}
+#menu_pie{
+list-style-type:none;
+text-align:center;
+}
+#menu_pie li{
+display:block;
+border-bottom:1px solid #DB282B;
+border-right:none;
+padding:5px 0;
+}
+#menu_pie li:last-child{
+border-bottom:1px solid #DB282B;
+}
+
+#img_msg{
+	display: none;
+}
+#img_msg_mobile{
+	display: block;
