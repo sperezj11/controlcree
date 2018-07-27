@@ -10,7 +10,7 @@ class AsignacionHorario extends Model
 
     protected $fillable = [
     	'id',
-        'semana',
+        'periodo',
     	'fechainicio',
         'fechafin',
         'horario',
@@ -19,5 +19,6 @@ class AsignacionHorario extends Model
         'monitor',
         'asignatura',
         'estrategia',
+        'sala'
     ];
 }

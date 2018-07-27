@@ -15,11 +15,16 @@ class CreateRegistrosAsistenciasMigration extends Migration
     {
       Schema::create('registros_asistencias', function($table)
         {
-           $table->integer('id',1);           
-            $table->integer('horarioAsignado');
+            $table->integer('id',1);   
+            $table->string('sala');
+            $table->date('fecha');   
+            $table->string('codigo');  
+            $table->string('monitor');    
+            $table->string('asignatura'); 
+            $table->string('horario');
             $table->integer('asistencia');
+            $table->string('descripcion');
             $table->timestamps();
-            $table->foreign('horarioAsignado')->references('id')->on('asignaciones_horarios');
             $table->foreign('asistencia')->references('id')->on('estados_asistencias');
             });
   

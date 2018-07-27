@@ -24,14 +24,16 @@ class AsignacionHorarioRequest extends FormRequest
     public function rules()
     {
         return [
-        'fechainicio'=> 'required',
-        'fechafin'=> 'required',
-        'horario'=> 'required',
-        'mesa'=> 'required',
-        'usuario'=> 'required',
-        'monitor'=> 'required',
+        'sala'=> 'integer|required|',
+        'periodo'=> 'integer|required|',
+        'fechainicio'=> 'required|date_format:Y-m-d',
+        'fechafin'=> 'required|date_format:Y-m-d',
+        'horario'=> 'integer|required|',
+        'mesa'=> 'integer|required|',
+        'usuario'=> 'integer|required',
+        'monitor'=> 'required|exists:estudiantes,id',
         'asignatura'=> 'required',
-        'estrategia'=> 'required',
+        'estrategia'=> 'integer|required|',
         ];
     }
 }

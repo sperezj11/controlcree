@@ -17,7 +17,7 @@ class CreateUsuariosMigration extends Migration
         {
             $table->integer('id',1);           
             $table->string('nombre');
-              $table->timestamps();
+            $table->timestamps();
 
      
           });

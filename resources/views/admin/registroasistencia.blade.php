@@ -10,7 +10,7 @@
   </div>
 
   <div class="panel-footer"><br>
-     <form class="form-horizontal" role="form" method="GET" action="{{ route('mostraracordeon') }}">
+     <form class="form-horizontal" role="form">
       {{ csrf_field() }}
     <label class="col-lg-2 control-label">Inicio/Fin:</label>
     <div class="col-lg-3">
@@ -21,7 +21,7 @@
     </div>
 
               <div class="form-group">
-                 <button type="submit" class="btn btn-primary" id="btn-consultar" name="btn-consultar">
+                 <button type="button" class="btn btn-primary" id="btn-consultar" name="btn-consultar"  onclick="realizaProceso();return false;">
                        Buscar
                   </button>
               </div>
@@ -38,16 +38,21 @@
       <h4 class="panel-title">
         <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
           LUNES
+
         </a>
+
       </h4>
     </div>
     <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
       <div class="panel-body">
 contenido Lunes
-      </div>
-    </div>
-  </div>
+{{$dias}}
+<div id="lunescontent">
 
+
+  
+</div>
+</div>
   <!-- Martes -->
 
   <div class="panel panel-default">

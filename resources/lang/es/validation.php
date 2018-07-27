@@ -42,11 +42,11 @@ return [
     'email'                => 'El campo :attribute no corresponde con una dirección de e-mail válida.',
     'file'                 => 'El campo :attribute debe ser un archivo.',
     'filled'               => 'El campo :attribute es obligatorio.',
-    'exists'               => 'El campo :attribute no existe.',
+    'exists'               => 'El campo :attribute no existe en BD.',
     'image'                => 'El campo :attribute debe ser una imagen.',
     'in'                   => 'El campo :attribute debe ser igual a alguno de estos valores :values.',
     'in_array'             => 'El campo :attribute no existe en :other.',
-    'integer'              => 'El campo :attribute debe ser un número entero.',
+    'integer'              => 'El campo :attribute debe ser seleccionado.',
     'ip'                   => 'El campo :attribute debe ser una dirección IP válida.',
     'ipv4'                 => 'El campo :attribute debe ser una dirección IPv4 válida.',
     'ipv6'                 => 'El campo :attribute debe ser una dirección IPv6 válida.',
@@ -89,7 +89,7 @@ return [
     'unique'               => 'El elemento :attribute ya está en uso.',
     'uploaded'             => 'El elemento :attribute fallo al subir.',
     'url'                  => 'El formato de :attribute no corresponde con el de una URL válida.',
-
+    
     /*
     |--------------------------------------------------------------------------
     | Custom Validation Language Lines

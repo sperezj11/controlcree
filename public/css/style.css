@@ -28,6 +28,7 @@ font-weight:normal;
 font-size:32px;
 margin: 20px 0 0 0;
 }
+
 #content {
 font-size:12px;
 	margin:0 auto;
@@ -35,7 +36,7 @@ font-size:12px;
 }
 
 #menu_usuario{
-	list-style-type: none;
+list-style-type: none;
 float:right;
 margin: 10px 0 0 0;
 padding:2px 0 2px 25px;
@@ -170,4 +171,12 @@ width:100px;
 .horario #enviar:hover{
 background:#991013;
 color:#FFF;
+}
+
+.modal-backdrop {
+    z-index: 1040 !important;
+}
+.modal-dialog {
+    margin: 2px auto;
+    z-index: 1100 !important;
 }

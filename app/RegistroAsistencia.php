@@ -9,8 +9,15 @@ class RegistroAsistencia extends Model
     protected $table = 'registros_asistencias';
 
     protected $fillable = [
-       'id',       
-       'horarioAsignado',
-       'asistencia'
+        'id',   
+       'sala',   
+       'fecha',
+       'codigo',
+       'monitor',
+       'asignatura',
+       'horario',
+       'asistencia',
+       'descripcion'
+
     ];
 }

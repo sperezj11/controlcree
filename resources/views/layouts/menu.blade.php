@@ -3,12 +3,16 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="csrf-token" content="{{ csrf_token() }}" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
         <title>Control CREE - @yield('title')</title>
 
         <!-- Bootstrap -->
         <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="../../css/datatables.min.css"/>
+        <link rel="stylesheet" type="text/css" href = "../../css/jquery-editable-select.min.css ">
+        <link rel="stylesheet" type="text/css" href = "../../css/jquery-editable-select.css ">
     </head>
     <body>
 
@@ -89,10 +93,15 @@
             </div>
         </div>
 
-        <!-- jQuery (necessary foor Bootstrap's JavaScript plugins) -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="../../js/jquery.searchable.js"></script>
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/registroasistencia.js"></script>
+        
+       <script src="../../js/datatables.min.js"></script>
+             <script  src = " ../../js/jquery-editable-select.js "> </script>
+       <script  src = " ../../js/jquery-editable-select.min.js "> </script>
 
         <script>
             $('#flash-overlay-modal').modal();

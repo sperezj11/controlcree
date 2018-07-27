@@ -4,19 +4,22 @@
 
 @section('content')
 
-	<h1><a href="../"><center><img src="../../img/editar.png" alt="CREE" width="45%" /></center></a></h1>
+	<h1><a href="../"><center><img src="../../img/bannereditar.png" alt="CREE" width="85%" /></center></a></h1>
 	
 <div class="container">
  
-	<div class="panel panel-primary">
+	<div class="panel panel-info">
 		<div class="panel-heading">
-			<h3 class="panel-title">Editar horario</h3>
+			<h3 class="panel-title">Editar horario {{$estudiante->nombre }}</h3>
 		</div>
 @include('errorformularios.error')		
 		<div class="panel-body">
 
-			<form class="form-horizontal" role="form" method="POST" action="{{ route('asignacionhorario.store') }}">
-
+		
+{!! Form::model($asighorarios, [
+    'method' => 'PATCH',
+    'route' => ['asignacionhorario.update', $asighorarios->id], 'class'=>'form-horizontal'
+]) !!}
 			{{ csrf_field() }}
 
 				<div class="form-group">
@@ -35,47 +38,37 @@
 					</div>
 				</div>
 
-				<!--div id="intervaloestrategia">
-
-					<div class="form-group">
-					<label for="fecha" class="col-sm-2 control-label">Fecha</label>
-					<div class="col-sm-10">
-						<input type="date" class="form-control" id="fecha" placeholder="Fecha" name="fecha">
-					</div>
-				</div>					
-
-				</div-->
-
-				<div class="form-group">
-					<label for="fechainicio" class="col-sm-2 control-label"><p class="text-center">Fecha inicio</p></label>
+			<div class="form-group">
+				<label for="fechainicio" class="col-sm-2 control-label"><p class="text-center">Fecha inicio</p></label>
 					<div class="col-sm-10">
 						<input type="date" class="form-control" id="fechainicio" placeholder="Fechainicio" name="fechainicio" value="{{$asighorarios->fechainicio }}">
 					</div>
-				</div>
-				<div class="form-group">
-					<label for="fechafin" class="col-sm-2 control-label"><p class="text-center">Fecha fin</p></label>
+			</div>
+
+			<div class="form-group">
+				<label for="fechafin" class="col-sm-2 control-label"><p class="text-center">Fecha fin</p></label>
 					<div class="col-sm-10">
 						<input type="date" class="form-control" id="fechafin" placeholder="Fechafin" name="fechafin" 
-						 value="{{$asighorarios->fechafin }}">
+					    value="{{$asighorarios->fechafin }}">
 					</div>
-				</div>
+			</div>
 
-				<div class="form-group">
-					<label for="horario" class="col-sm-2 control-label"><p class="text-center">Horario</p></label>
+			<div class="form-group">
+				<label for="horario" class="col-sm-2 control-label"><p class="text-center">Horario</p></label>
 					<div class="col-sm-10">
 						<select id="horario" class="form-control" name="horario">->orderBy
 							<option value= "null">-- Seleccione horario --</option>
-							@foreach($horarios as $horario)
-								@if ($horario->id== $asighorarios->horario)
-									<option value="{{ $horario->id }}" selected>{{ $horario->dia." ".$horario->horaInicio."-".$horario->horaFin}}</option>
-								@else
-									<option value="{{ $horario->id }}">{{ $horario->dia." ".$horario->horaInicio."-".$horario->horaFin}}</option>
-								@endif
+					@foreach($horarios as $horario)
+						@if ($horario->id== $asighorarios->horario)
+							<option value="{{ $horario->id }}" selected>{{ $horario->dia." ".$horario->horaInicio."-".$horario->horaFin}}</option>
+						@else
+							<option value="{{ $horario->id }}">{{ $horario->dia." ".$horario->horaInicio."-".$horario->horaFin}}</option>
+						@endif
 
-							@endforeach
+					@endforeach
 						</select>
 					</div>
-				</div>
+			</div>
 
 				<div class="form-group">
 					<label for="mesa" class="col-sm-2 control-label"><p class="text-center">Mesa</p></label>
@@ -137,11 +130,11 @@
 					</div>
 				</div>
 
-				<div class="form-group">
-					<div class="col-sm-offset-2 col-sm-10">
-					<button type="submit" class="btn btn-primary" >Guardar</button>
+<div class="trans text-center"> 
+{!! Form::submit('Guardar', ['class' => 'btn btn-primary']) !!}
 
-					</div>
+</div> 
+{!! Form::close() !!}
 				</div>
 			</form>
 		</div>

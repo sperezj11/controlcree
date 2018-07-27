@@ -20,7 +20,7 @@ class CreateEstudiantesMigration extends Migration
             $table->string('celular');
             $table->string('email1');
             $table->string('email2');
-             $table->timestamps();
+            $table->timestamps();
 
             $table->primary('id');
           });
